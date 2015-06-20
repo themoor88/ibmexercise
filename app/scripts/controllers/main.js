@@ -10,7 +10,7 @@
 angular.module('ibmexerciseApp')
   .controller('MainCtrl', ['$scope', 'imagesFactory', function($scope, imagesFactory) {
     imagesFactory.getImages().success(function(json){
-      $scope.image = json.photos.photo;
-      console.log($scope.image);
+      $scope.images = json.photos.photo;
+      console.log($scope.images);
     });
   }]);

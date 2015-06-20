@@ -1,0 +1,6 @@
+<div data-ng-repeat="image in images">
+  <div class="image">
+    <h1 class="">{{image.title}}</h1>
+    <img data-ng-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg">
+  </div>
+</div>
