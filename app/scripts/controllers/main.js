@@ -9,10 +9,8 @@
  */
 angular.module('ibmexerciseApp')
   .controller('MainCtrl', ['$scope', 'imagesFactory', function($scope, imagesFactory) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-    console.log($scope.awesomeThings);
+    imagesFactory.getImages().success(function(json){
+      $scope.image = json.photos.photo;
+      console.log($scope.image);
+    });
   }]);
