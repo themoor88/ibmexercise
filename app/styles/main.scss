@@ -37,22 +37,28 @@ body {
 
 .image {
   @extend .col-lg-4, .col-md-6, .col-xs-12;
-  background-color: $primary-color;
   padding: 0;
   text-align: center;
 
+  &:hover{
+    opacity: 0.6;
+    filter: alpha(opacity=20);
+    transition: opacity 0.2s linear;
+    img {
+      opacity: 0.3;
+    }
+  }
   img {
-    width:100%;
+    width: 95%;
     height: 80%;
-    margin: 0 auto;
+    transition: .8s opacity;
+    margin-bottom: 1em;
+
+    &:hover{
+      opacity: 1;
+    }
   }
 }
-
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 
 
 
