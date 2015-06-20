@@ -1,6 +1,8 @@
-<div data-ng-repeat="image in images">
-  <div class="image">
-    <h1 class="">{{image.title}}</h1>
-    <img data-ng-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg">
+<div class="row">
+  <div data-ng-repeat="image in images">
+    <div class="image">
+      <img data-ng-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg">
+      <!-- <h1 class="">{{image.title}}</h1> -->
+    </div>
   </div>
 </div>
