@@ -8,10 +8,11 @@
  * Controller of the ibmexerciseApp
  */
 angular.module('ibmexerciseApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', ['$scope', 'imagesFactory', function($scope, imagesFactory) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+    console.log($scope.awesomeThings);
+  }]);
