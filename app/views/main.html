@@ -1,10 +1,10 @@
 <div class="row">
-  <div data-ng-repeat="image in images">
+  <div data-ng-repeat="image in images | orderBy: title | filter: q | orderBy: id">
     <figure class="image">
       <img data-ng-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg">
-      <!-- <figcaption class="title">
+      <figcaption class="title">
         <h1>{{image.title}}</h1>
-      </figcaption> -->
+      </figcaption>
     </figure>
   </div>
 </div>

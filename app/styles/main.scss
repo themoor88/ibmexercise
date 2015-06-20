@@ -17,46 +17,16 @@ body {
   padding-right: 15px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 992px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-}
-
 .image {
-  @extend .col-lg-4, .col-md-6, .col-xs-12;
+  @extend .col-lg-12, .col-md-12, .col-xs-12;
   padding: 0;
   text-align: center;
 
-  &:hover{
-    opacity: 0.6;
-    filter: alpha(opacity=20);
-    transition: opacity 0.2s linear;
-    img {
-      opacity: 0.3;
-    }
-  }
   img {
-    width: 95%;
+    width: 75%;
     height: 80%;
     transition: .8s opacity;
     margin-bottom: 1em;
-
-    &:hover{
-      opacity: 1;
-    }
   }
 }
 
