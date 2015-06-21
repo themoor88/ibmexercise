@@ -7,9 +7,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
@@ -21,23 +27,43 @@ body {
   @extend .col-lg-12, .col-md-12, .col-xs-12;
   padding: 0;
   text-align: center;
+  margin-bottom: 2em;
+
+  &:hover .title{
+    opacity: 0.8;
+  }
 
   img {
-    width: 75%;
+    width: 60%;
     height: 80%;
-    transition: .8s opacity;
-    margin-bottom: 1em;
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    margin: 0 auto;
+    height: 100%;
+    width: 60%;
+    text-align: center;
+    opacity: 0;
+    background-color: #333;
+    transition: all 0.5s ease;
+
+    h1 {
+      position: absolute;
+      color: #fff;
+      top: 33%;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width: 768px) {
+  .title {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+}
